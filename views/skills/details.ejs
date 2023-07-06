@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+  <main>
+    <nav>
+    <a href="/skills">Back</a></li>
+    </nav>
+
+    <hgroup>
+      <h2>Project: <%= skill.project %></h2>
+      <h3>Technologies Used: <strong><%= skill.tech %></strong></h3>
+      <h3>Rating: <%= skill.lvl %></h3>
+    </hgroup>
+
+    <form action="/skills/<%= skill.project %>?_method=DELETE" method="POST" class="delete">
+      <button type="submit">Remove Skill</button>  
+    </form>
+  </main>
+
+<%- include('../partials/footer') %>

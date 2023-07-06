@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+<main>
+  <h2>Skillset by Project</h2>
+  <ul>
+      <% skills.forEach(function(skill) { %>
+        <li>
+          <a href="/skills/<%= skill.project %>"><%= skill.project %></a> - <%= skill.description %>
+        </li>
+      <% }); %>
+    </ul>
+    <a href="/skills/new">Add New Skill</a>
+</main>
+<%- include('../partials/footer') %>

@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<main>
+  <nav>
+    <a href="/skills">Back</a></li>
+  </nav>
+  <form action="/skills" method="POST">
+    <input type="text" name="project" placeholder="Project Name" required>    <%# the 'name' attribute MUST match the name on the models %>
+    <input type="text" name="tech" placeholder="What techs were used?" required>
+    <input type="text" name="lvl" placeholder="Rate it out of 10" pattern="\d" required>
+    <button type="submit">Add Skill</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>
