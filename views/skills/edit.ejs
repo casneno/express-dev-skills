@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<main>
+  <nav>
+    <a href="/skills">Back</a></li>
+  </nav>
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+    <input type="text" name="project" value="<%= skill.project %>">    <%# the 'name' attribute MUST match the name on the models %>
+    <input type="text" name="tech" value="<%= skill.tech %>">
+    <input type="text" name="lvl" value="<%= skill.lvl %>">
+    <button type="submit">Save Changes</button>
+  </form>
+</main>
+
+<%- include('../partials/footer') %>

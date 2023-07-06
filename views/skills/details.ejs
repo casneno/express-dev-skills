@@ -10,9 +10,12 @@
       <h3>Rating: <%= skill.lvl %></h3>
     </hgroup>
 
-    <form action="/skills/<%= skill.project %>?_method=DELETE" method="POST" class="delete">
-      <button type="submit">Remove Skill</button>  
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+    
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST" class="delete">
+      <input class="delete" type="submit" value="Delete Skill"/>
     </form>
+
   </main>
 
 <%- include('../partials/footer') %>
